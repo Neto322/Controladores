@@ -19,6 +19,6 @@ use App\Http\Controllers\NoticiasController;
 
 Route::get('/', [InicioController::class, "index"]);
 
-Route::get('/noticias',[NoticiasController::class,"lista"]);
+Route::get('/noticias',[NoticiasController::class,"lista"]) ->name("noticias");
 
-Route::get('/noticias/{id}',[NoticiasController::class],"detalles");
+Route::get('/noticias/{noticia}',[NoticiasController::class,"detalles"]) ->name("noticias.detalles");
