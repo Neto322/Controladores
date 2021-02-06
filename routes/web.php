@@ -28,3 +28,6 @@ Route::get('/noticias/{noticia}',[NoticiasController::class,"detalles"]) ->name(
 
 Route::get("/admin/noticias", [AdminNoticiasController::class,"index"])->name("admin.noticias.index");
 
+Route::get("/admin/noticias/create", [AdminNoticiasController::class,"create"])->name("admin.noticias.create");
+
+Route::post("/admin/noticias",[AdminNoticiasController::class,"store"])->name("admin.noticias.store");

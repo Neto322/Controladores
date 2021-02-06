@@ -7,7 +7,8 @@
 </head>
 <body>
     <h1>Lista de noticias</h1>
-    <a href="">Crear nueva noticia </a>
+    <a href="{{route("admin.noticias.create")}}">Crear nueva noticia </a>
+
     <table>
         <thead>
             <th>
