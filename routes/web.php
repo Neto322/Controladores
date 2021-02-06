@@ -6,6 +6,9 @@ use App\Http\Controllers\InicioController;
 
 use App\Http\Controllers\NoticiasController;
 
+use App\Http\Controllers\Admin\NoticiasController as AdminNoticiasController;
+
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -22,3 +25,6 @@ Route::get('/', [InicioController::class, "index"]);
 Route::get('/noticias',[NoticiasController::class,"lista"]) ->name("noticias");
 
 Route::get('/noticias/{noticia}',[NoticiasController::class,"detalles"]) ->name("noticias.detalles");
+
+Route::get("/admin/noticias", [AdminNoticiasController::class,"index"])->name("admin.noticias.index");
+
