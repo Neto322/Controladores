@@ -31,3 +31,8 @@ Route::get("/admin/noticias", [AdminNoticiasController::class,"index"])->name("a
 Route::get("/admin/noticias/create", [AdminNoticiasController::class,"create"])->name("admin.noticias.create");
 
 Route::post("/admin/noticias",[AdminNoticiasController::class,"store"])->name("admin.noticias.store");
+
+Route::get("/admin/noticias/{id}/edit", [AdminNoticiasController::class, "edit"])->name("admin.noticias.edit");
+
+Route::put("/admin/noticias/{id}",[AdminNoticiasController::class,"update"])->name("admin.noticias.update");
+

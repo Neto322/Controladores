@@ -3,10 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lista de noticias</title>
+    <title>Editar de noticia </title>
 </head>
 <body>
     <h1>Lista de noticias</h1>
+    @if(Session::has("exito"))
+        <p style="color: #0e7a0e">{{Session::get("exito")}}</p>
+    @endif
+
+    @if(Session::has("error"))
+        <p style="color: #a11919a1">{{Session::get("error")}}</p>
+    @endif
     <a href="{{route("admin.noticias.create")}}">Crear nueva noticia </a>
 
     <table>
@@ -21,7 +28,7 @@
             <tr>
                 <td> {{$noticia->titulo}}  </td>
                 <td>
-                    <a href="#">Editar</a>
+                    <a href="{{route("admin.noticias.edit", 1)}}"   >Editar</a>
                     <a href="#">Eliminar</a>
 
                 </td>
