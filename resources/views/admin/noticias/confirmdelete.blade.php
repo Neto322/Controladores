@@ -7,9 +7,17 @@
     <title>Confirmar eliminacion</title>
 </head>
 <body>
+    <a href="{{route ("admin.noticias.index") }}">Volver a la lista de noticias</a>
     <h1>Confirmar eliminacion de noticia: {{$noticia->id}}</h1>
     <p>Confirmar eliminacion de noticia: {{$noticia->titulo}}</p>
-    <button>Cancelar</button>
-    <button>Confirmar</button>
+    <form method="POST" action="{{ route("admin.noticias.destroy" , $noticia->id) }}">
+    
+        @csrf
+        @method("delete");
+        <a href="{{route("admin.noticias.index") }}"><button type="button">Cancelar</button></a>
+        <button type="submit">Confirmar</button>
+
+
+    </form>
 </body>
 </html>

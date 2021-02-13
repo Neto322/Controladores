@@ -38,3 +38,8 @@ Route::put("/admin/noticias/{id}",[AdminNoticiasController::class,"update"])->na
 
 Route::get("/admin/noticias/{id}/confirmdelete",[AdminNoticiasController::class,"confirmdelete"])->name("admin.noticias.confirmdelete");
 
+Route::delete("/admin/noticias/{id}",[AdminNoticiasController::class, "destroy"])->name("admin.noticias.destroy");
+
+Route::get("/admin/noticias/{id}/confirmdelete",[AdminNoticiasController::class,"confirmdelete"])->name("admin.noticias.confirmdelete");
+
+Route::get("/admin/noticias/{id}",[AdminNoticiasController::class,"show"])->name("admin.noticias.show");
