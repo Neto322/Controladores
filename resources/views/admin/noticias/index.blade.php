@@ -28,7 +28,7 @@
             <tr>
                 <td> {{$noticia->titulo}}  </td>
                 <td>
-                    <a href="{{route("admin.noticias.edit", 1)}}"   >Editar</a>
+                    <a href="{{route("admin.noticias.edit", $noticia->id)}}"   >Editar</a>
                     <a href="#">Eliminar</a>
 
                 </td>

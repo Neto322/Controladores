@@ -74,5 +74,25 @@ class NoticiasController extends Controller
 
 
     }
+
+    public function confirmdelete($id)
+    {
+
+
+        $noticia = Noticia::find($id);
+
+
+        $argumentos = array();
+
+
+        $argumentos["noticia"] = $noticia;
+
+
+        return view("admin.noticias.confirmdelete", $argumentos);
+
+        
+
+
+    }
    
 }
