@@ -36,5 +36,5 @@ Route::get("/admin/noticias/{id}/edit", [AdminNoticiasController::class, "edit"]
 
 Route::put("/admin/noticias/{id}",[AdminNoticiasController::class,"update"])->name("admin.noticias.update");
 
-Route::get("/admin/noticias/{id/confirmdelete}",[AdminNoticiasController::class,"confirmdelete"])->name("admin.noticias.confirmdelete");
+Route::get("/admin/noticias/{id}/confirmdelete",[AdminNoticiasController::class,"confirmdelete"])->name("admin.noticias.confirmdelete");
 

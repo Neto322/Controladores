@@ -7,7 +7,9 @@
     <title>Confirmar eliminacion</title>
 </head>
 <body>
-    <h1>Confirmar eliminacion de noticia: {{ $noticia }}</h1>
-    <p>Confirmar eliminacion de noticia: {{ $noticia->titulo }}</p>
+    <h1>Confirmar eliminacion de noticia: {{$noticia->id}}</h1>
+    <p>Confirmar eliminacion de noticia: {{$noticia->titulo}}</p>
+    <button>Cancelar</button>
+    <button>Confirmar</button>
 </body>
 </html>
